@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+$fontBase: 16;
+
+$fonts: (40, 32, 24, 18);
+
+@mixin font-regular {
+  font-weight: 400;
+}
+
+@mixin font-medium {
+  font-weight: 500;
+}
+
+@mixin font-bold {
+  font-weight: 700;
+}

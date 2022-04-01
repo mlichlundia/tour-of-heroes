@@ -1,0 +1,29 @@
+@use "sass:map";
+@use "sass:list";
+@use "sass:math";
+
+@function color($name) {
+  @if not map.get($colors, $name) {
+    @error '"#{$name}" is not a valid color name';
+  }
+  @return map.get($colors, $name);
+}
+
+@function font($value) {
+  @if not($fonts, $value) {
+    @error '"#{$value}" is not a valid value';
+  }
+  @return #{$value}px;
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+
+  @return $number;
+}
+
+@function rem($px) {
+  @return #{math.div(strip-unit($px), strip-unit($fontBase))}rem;
+}

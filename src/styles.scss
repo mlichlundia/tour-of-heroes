@@ -1,1 +1,73 @@
-/* You can add global styles to this file, and also import other style files */
+@import './styles/colors';
+@import './styles/typogrphy';
+@import './styles/functions';
+
+* {
+  font-family: 'DM Sans', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+
+  color: color(dark-900);
+  background: color(light-100);
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button,
+textarea {
+  border: none;
+  outline: none;
+}
+
+input,
+button,
+textarea,
+a {
+  transition: 0.25s;
+}
+
+body {
+  padding: rem(64) rem(120);
+}
+
+button {
+  @include font-medium;
+  background: color(blue-800);
+  color: color(light-100);
+
+  &:hover {
+    background: color(blue-900);
+    transform: scale(1.1);
+  }
+}
+
+a {
+  color: color(blue-800);
+}
+
+h1,
+h2,
+h3 {
+  @include font-bold;
+  color: color(blue-800);
+  margin: 0;
+}
+
+h1 {
+  font-size: font(40);
+}
+
+h2 {
+  font-size: font(32);
+}
+
+h3 {
+  font-size: font(24);
+}
+
+p {
+  font-size: font(18);
+}
