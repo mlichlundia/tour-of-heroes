@@ -22,6 +22,11 @@ textarea {
   outline: none;
 }
 
+ul,
+ol {
+  list-style: none;
+}
+
 input,
 button,
 textarea,
@@ -48,16 +53,58 @@ a {
   color: color(blue-800);
 }
 
+input {
+  font-size: inherit;
+  border: rem(1) solid color(light-300);
+  border-radius: rem(6);
+  padding: rem(8);
+}
+
+ul {
+  width: rem(200);
+  li {
+    position: relative;
+    padding: rem(12) rem(16);
+    margin-bottom: rem(6);
+    background: color(blue-700);
+    color: color(light-100);
+    border-radius: rem(8);
+    font-size: font(20);
+    text-align: center;
+    transition: 0.25s;
+
+    &:last-child {
+      margin-bottom: rem(0);
+    }
+
+    &:hover {
+      background: color(blue-800);
+      transform: translate(rem(16)) scale(1.05);
+    }
+
+    span {
+      background: inherit;
+      color: inherit;
+      margin: 0 rem(4) 0 0;
+    }
+  }
+}
+
 h1,
 h2,
 h3 {
   @include font-bold;
-  color: color(blue-800);
   margin: 0;
+}
+
+h2,
+h3 {
+  color: color(dark-900);
 }
 
 h1 {
   font-size: font(40);
+  color: color(blue-800);
 }
 
 h2 {
