@@ -1,0 +1,18 @@
+@import '../../styles';
+
+.messages {
+}
+
+.messages__button_clear {
+  font-size: font(16);
+  padding: rem(8) rem(12);
+  margin: rem(12) 0;
+  background: none;
+  color: color(red-900);
+  border: rem(1) solid color(red-900);
+
+  &:hover {
+    background: color(red-900);
+    color: color(light-100);
+  }
+}

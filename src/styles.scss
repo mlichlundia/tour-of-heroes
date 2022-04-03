@@ -42,10 +42,11 @@ button {
   @include font-medium;
   background: color(blue-800);
   color: color(light-100);
+  border-radius: rem(6);
 
   &:hover {
     background: color(blue-900);
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
 
