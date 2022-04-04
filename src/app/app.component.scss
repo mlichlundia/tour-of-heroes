@@ -1,0 +1,13 @@
+@import '../styles.scss';
+
+nav {
+  margin: rem(24) 0;
+  a {
+    margin: 0 rem(8) 0 0;
+    background: color(blue-100);
+
+    &:hover {
+      background: color(blue-300);
+    }
+  }
+}

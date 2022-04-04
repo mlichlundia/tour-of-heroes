@@ -1,0 +1,17 @@
+@import '../../styles.scss';
+
+.heroes-menu {
+  margin: rem(32) 0;
+
+  a {
+    padding: rem(20);
+    margin: 0 rem(8) 0 0;
+    background: color(blue-800);
+    color: color(light-100);
+    border-radius: rem(8);
+
+    &:hover {
+      background: color(blue-900);
+    }
+  }
+}
